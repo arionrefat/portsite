@@ -1,7 +1,7 @@
 ---
 inProgress: false
-title: Project title
-img_alt: project image alt text
+title: Youtube Video Summerizer
+img_alt: youtube_summerizer
 link: https://github.com/veranikabarel?tab=repositories
-tags: ['React', 'CSS', 'Typescript']
+tags: ['React Native', 'Expo']
 ---

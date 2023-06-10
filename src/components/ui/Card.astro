@@ -8,6 +8,7 @@ interface Props {
 	title?: string;
 	tags: string[];
 	children?: HTMLElement | HTMLElement[];
+	imgSrc?: ImageMetadata
 }
 
 const { url = '#', alt = 'Project image', title = 'Project title', tags = ['Tags'] } = Astro.props;
