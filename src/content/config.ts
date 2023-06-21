@@ -2,11 +2,12 @@ import { defineCollection, z } from 'astro:content';
 
 const projectsCollection = defineCollection({
 	schema: z.object({
-		inProgress: z.boolean(),
+		inProgress: z.boolean().optional(),
 		title: z.string(),
 		tags: z.array(z.string()),
 		link: z.string(),
 		img_alt: z.string().optional(),
+		open_source: z.boolean().optional(),
 	}),
 });
 

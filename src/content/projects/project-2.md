@@ -1,7 +1,7 @@
 ---
-inProgress: false
-title: Project title
-img_alt: project image alt text
-link: https://github.com/veranikabarel?tab=repositories
-tags: ['React', 'CSS', 'Typescript']
+inProgress: true
+title: Question generation engine
+img_alt: An engine for generating questions
+link: https://github.com/arionrefat/question-generation-engine
+tags: ['Nodejs', 'OpenAI', 'Typescript']
 ---

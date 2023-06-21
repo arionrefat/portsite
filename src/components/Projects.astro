@@ -3,20 +3,55 @@ import Card from '@components/ui/Card.astro';
 import { getCollection } from 'astro:content';
 
 const projects = await getCollection('projects', ({ data }) => {
-	return !data.inProgress;
+	return !data.inProgress && !data.open_source;
+});
+
+const currentWorking = await getCollection('projects', ({ data }) => {
+	return data.inProgress;
+});
+
+const openSource = await getCollection('projects', ({ data }) => {
+	return data.open_source;
 });
 ---
 
-<section
-	data-testid="projects"
-	id="projects"
-	class="mb-10 flex flex-col items-center justify-center md:mb-0 md:h-screen"
->
-	<h2 class="font-monospace text-2xl text-orange lg:text-4xl">Projects</h2>
-	<span class="mb-10 h-1 w-10 bg-orange"></span>
+<section data-testid="projects" id="projects" class="mb-10 md:mb-0">
+	<div class="flex flex-col items-center justify-center">
+		<h2 class="font-mono text-3xl text-orange lg:text-5xl">Projects</h2>
+		<span class="mt-4 h-1 w-full bg-orange"></span>
+	</div>
+	<h4 class="mt-10 text-xl text-orange lg:text-3xl">Currently Working On</h4>
+
+	<div class="mb-10 flex flex-wrap justify-center md:justify-start">
+		{
+			currentWorking.map((project) => (
+				<Card
+					url={project.data.link}
+					title={project.data.title}
+					alt={project.data.img_alt}
+					tags={project.data.tags}
+				/>
+			))
+		}
+	</div>
+
+	<h4 class="text-xl text-orange lg:text-3xl">Worked on</h4>
 	<div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
 		{
 			projects.map((project) => (
+				<Card
+					url={project.data.link}
+					title={project.data.title}
+					alt={project.data.img_alt}
+					tags={project.data.tags}
+				/>
+			))
+		}
+	</div>
+	<h4 class="text-xl text-orange lg:text-3xl">OpenSource Project Contribution</h4>
+	<div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
+		{
+			openSource.map((project) => (
 				<Card
 					url={project.data.link}
 					title={project.data.title}
@@ -30,10 +65,10 @@ const projects = await getCollection('projects', ({ data }) => {
 		href="https://github.com/arionrefat?tab=repositories"
 		target="_blank"
 		rel="noopener"
-		class="flex flex-row text-black hover:text-orange dark:text-white dark:hover:text-orange"
+		class="flex items-center justify-center text-black hover:text-orange dark:text-white dark:hover:text-orange mt-10"
 		aria-label="link to repository"
 	>
-		View all projects 
+		View all projects
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
