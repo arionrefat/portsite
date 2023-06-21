@@ -3,11 +3,13 @@ import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx(), image()],
-  output: "server",
-  adapter: vercel()
+	integrations: [tailwind(), mdx(), image()],
+	output: 'server',
+	adapter: vercel({
+		analytics: true,
+	}),
 });
