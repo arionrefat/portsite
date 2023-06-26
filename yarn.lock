@@ -1154,7 +1154,7 @@ astro-navbar@^1.2.0:
   resolved "https://registry.yarnpkg.com/astro-navbar/-/astro-navbar-1.2.0.tgz#5f0ea2e72fd99c84ba66e552b5e42fb807823816"
   integrity sha512-Pq9HTmCvEAUw1zEQlqDc0/wiXEYLjo2gpUDuiZtULDK8VeXpq7XsmRJXU9UjZ4OFJgm6X/QV+rVVbgUWaUeV0w==
 
-astro-seo@^0.7.2:
+astro-seo@^0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/astro-seo/-/astro-seo-0.7.4.tgz#0c2788b97ec3944390be2dd39a8ad9a6aec294b0"
   integrity sha512-E+wJmxOnvBRjgzVctdGk/VdwoEqeQ6Q/KgVW2wRBXZWJVDgOweB32Da/UiH0/FpGncPzo2daOrc08DNn5wTanw==
