@@ -1,29 +1,40 @@
 ---
-import heroImage from '@assets/images/hero.png';
-import { Image } from '@astrojs/image/components';
+import Button from '@components/ui/Button.astro';
 ---
 
 <section
-	data-testid="hero"
-	class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
+	data-testid='hero'
+	class='flex h-[80vh] flex-col items-center justify-center text-center lg:flex-row'
 >
-	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
+	<div class='mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2'>
 		<div>
-			<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-				Hi! <span class="text-orange">Welcome</span> <br />
-        I'm Gazi Refat
+			<h1 class='mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl'>
+				Hey! 👋
+				<br />
+				I'm <span class='text-twilight-100'>Gazi Refat</span>
 			</h1>
 		</div>
+		<div class='mb-10'>
+			<a
+				href='CV.pdf'
+				target='_blank'
+				rel='noopener'
+				aria-label='Download cv'
+			>
+				<Button style={'primary'} size={'lg'} class={'flex'} name='learn more'>Résumé</Button>
+			</a>
+		</div>
 	</div>
-	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">
-		<Image
-			src={heroImage}
-			alt="Coding girl"
-			aspectRatio="4:4"
-			format="png"
-			width={600}
-			height={600}
-			loading="eager"
-		/>
+	<div class='w-full text-justify text-black dark:text-white lg:w-1/2'>
+		<p class='mb-4'>
+			Hello there! My name is Gazi Refat, a passionate individual completing undergraduate degree in
+			Computer Science and Engineering. I'm also currently serving as the Chief Operating Officer
+			(COO) at <a href='https://reinforz.ai' class='font-bold text-twilight-100'>Reinforz AI</a>
+		</p>
+		<p>
+			I'm also a Full Stack Web Developer. I have a deep fascination with technology and love to
+			immerse myself in different tools and technologies, always eager to learn and try something
+			new. Currently, I'm learning about NLP, LLMs and prompt engineering.
+		</p>
 	</div>
 </section>

@@ -1,40 +1,35 @@
 ---
 import ToggleTheme from '@components/ui/ToggleTheme.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+import Social from '@components/ui/Social.astro';
 
 const menuitems = [
 	{
-		title: 'About',
-		path: '#about',
+		title: 'Home',
+		path: '/#',
 	},
 	{
 		title: 'Projects',
-		path: '#projects',
-	},
-	{
-		title: 'Contact',
-		path: '#contact',
+		path: '/projects',
 	},
 ];
 ---
 
-<header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
+<header data-testId='header' class='my-5 flex flex-col items-center justify-between lg:flex-row'>
 	<Astronav>
-		<div class="flex w-full items-center justify-between lg:w-auto">
-			<div class="block lg:hidden">
-				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
+		<div class='flex w-full items-center justify-between lg:w-auto'>
+			<div class='block lg:hidden'>
+				<MenuIcon class='h-4 w-4 text-black dark:text-white' />
 			</div>
-		</div>
-		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
-			<ul class="flex flex-col lg:flex-row lg:gap-3">
+			<ul class='flex flex-row gap-3'>
 				{
 					menuitems.map((item) => (
 						<>
 							<li>
 								<a
-									aria-label="navigation link"
+									aria-label='navigation link'
 									href={item.path}
-									class="flex py-2 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"
+									class='flex py-2 text-black hover:text-twilight-500 dark:text-white dark:hover:text-twilight-100 lg:px-3'
 								>
 									{item.title}
 								</a>
@@ -42,8 +37,13 @@ const menuitems = [
 						</>
 					))
 				}
-				<li><ToggleTheme /></li>
 			</ul>
+		</div>
+		<MenuItems class='mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto'>
+			<div class='flex flex-col lg:flex-row gap-5'>
+				<Social />
+				<ToggleTheme />
+			</div>
 		</MenuItems>
 	</Astronav>
 </header>

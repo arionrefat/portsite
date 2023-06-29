@@ -16,6 +16,21 @@ module.exports = {
 			black: '#000',
 			white: '#fff',
 			orange: '#E06330',
+			cold: {
+				100: '#e0ffff',
+				200: '#d3e3f3',
+			},
+			twilight: {
+				100: '#a193d9',
+				200: '#7a6aa9',
+				300: '#56437c',
+				400: '#331f51',
+				500: '#140029',
+			},
+			lightpurple: {
+				100: '#8395f9',
+				200: '#989ede',
+			},
 		},
 		fontFamily: {
 			// Headings
