@@ -16,8 +16,16 @@ const { title = 'John Doe | Web developer' } = Astro.props as LayoutProps;
 		<SEO
 			title='Portsite'
 			description='Personal website for Arion Refat'
-			extend={{
-				link: [{ rel: 'icon', href: '/favicon.svg' }],
+			openGraph={{
+				basic: {
+					title: 'Cofounder & COO of Reinforz',
+					type: 'Personal website',
+					image:
+						'https://www.gazirefat.me/favicon.svg',
+				},
+			}}
+			twitter={{
+				creator: '@refatul_arion',
 			}}
 		/>
 		<meta charset='UTF-8' />
