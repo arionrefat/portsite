@@ -2,13 +2,6 @@
 import ToggleTheme from '@components/ui/ToggleTheme.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
 import Social from '@components/ui/Social.astro';
-
-const menuitems = [
-	{
-		title: 'Home',
-		path: '/#',
-	}
-];
 ---
 
 <header data-testId='header' class='my-5 flex flex-col items-center justify-between lg:flex-row'>
@@ -17,23 +10,6 @@ const menuitems = [
 			<div class='block lg:hidden'>
 				<MenuIcon class='h-5 w-5 text-black dark:text-white' />
 			</div>
-			<ul class='flex flex-row gap-3'>
-				{
-					menuitems.map((item) => (
-						<>
-							<li>
-								<a
-									aria-label='navigation link'
-									href={item.path}
-									class='flex py-2 text-black hover:text-twilight-500 dark:text-white dark:hover:text-twilight-100 lg:px-3'
-								>
-									{item.title}
-								</a>
-							</li>
-						</>
-					))
-				}
-			</ul>
 		</div>
 		<MenuItems class='mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto'>
 			<div class='flex flex-col lg:flex-row gap-5'>
