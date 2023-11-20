@@ -1,18 +1,13 @@
 ---
 import ToggleTheme from '@components/ui/ToggleTheme.astro';
-import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+import { Astronav, MenuItems } from 'astro-navbar';
 import Social from '@components/ui/Social.astro';
 ---
 
-<header data-testId='header' class='my-5 flex flex-col items-center justify-between lg:flex-row'>
+<header data-testId="header" class="my-5 flex flex-col items-center justify-between">
 	<Astronav>
-		<div class='flex w-full items-center justify-between lg:w-auto'>
-			<div class='block lg:hidden'>
-				<MenuIcon class='h-5 w-5 text-black dark:text-white' />
-			</div>
-		</div>
-		<MenuItems class='mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto'>
-			<div class='flex flex-col lg:flex-row gap-5'>
+		<MenuItems class="mt-2 lg:flex">
+			<div class="flex flex-row gap-5">
 				<Social />
 				<ToggleTheme />
 			</div>
