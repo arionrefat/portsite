@@ -46,7 +46,7 @@ export default async function RootLayout({
         {/* App shell with sidebar + top nav inline */}
         <div className="flex">
           <aside className="sidebar hidden md:flex">
-            <div className="brand text-[12px] font-semibold tracking-wide rotate-180 writing-mode-vertical">{cfg.hero?.name?.split(" ")[0] || cfg.site.title}</div>
+            <div className="brand text-[14px] font-semibold tracking-wide rotate-180 writing-mode-vertical">{cfg.hero?.name?.split(" ")[0] || cfg.site.title}</div>
             <div className="grow flex flex-col items-center gap-5 pt-10">
               {(cfg.hero?.social ?? []).map(s => (
                 <SocialIcon key={s.href} platform={s.label} href={s.href} className="social-dot" />

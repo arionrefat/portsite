@@ -29,12 +29,12 @@ function Hero({ cfg }: { cfg: PortfolioConfig }) {
   <div className="flex flex-col md:flex-row gap-12">
         <div className="flex-1 space-y-6">
           <div className="space-y-3">
-            <h1 className="text-[26px] md:text-[28px] leading-[1.25] max-w-xl">
+            <h1 className="text-[30px] md:text-[32px] leading-[1.25] max-w-xl">
               <span className="muted">{hero.name?.split(" ")[0]} is a </span>
               <span className="text-[var(--accent)]">full-stack engineer</span> and <br />
               <span className="text-[var(--accent)]">AI developer</span>
             </h1>
-            {hero.summary ? <p className="max-w-xl text-[12px] leading-relaxed">{hero.summary}</p> : null}
+            {hero.summary ? <p className="max-w-xl text-[14px] leading-relaxed">{hero.summary}</p> : null}
           </div>
           <div className="flex gap-3 flex-wrap">
             {(hero.actions ?? []).map(a => {
@@ -44,11 +44,11 @@ function Hero({ cfg }: { cfg: PortfolioConfig }) {
           </div>
           <div className="pt-4">
             <div className="status-pill">
-              <span className="dot" /> Currently working at <strong className="text-[10px] tracking-wide">Auxo Solutions</strong>
+              <span className="dot" /> Currently working at <strong className="text-[12px] tracking-wide">Auxo Solutions</strong>
             </div>
           </div>
           {(hero.social ?? []).length ? (
-            <div className="flex gap-4 text-[11px]">
+            <div className="flex gap-4 text-[13px]">
               {hero.social?.map(s => (
                 <SocialIcon key={s.href} platform={s.label} href={s.href} className="hover:text-[var(--accent)]" />
               ))}
@@ -107,7 +107,7 @@ function ProjectCards({ items = [] as Project[], description }: { items?: Projec
   
   return (
     <div className="space-y-6">
-      {description && <p className="text-[12px] leading-relaxed max-w-2xl">{description}</p>}
+      {description && <p className="text-[14px] leading-relaxed max-w-2xl">{description}</p>}
       <div className="grid-auto">
         {items.map((p) => (
           <article key={p.title} className="project-card">
@@ -117,7 +117,7 @@ function ProjectCards({ items = [] as Project[], description }: { items?: Projec
             <div className="project-meta">
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold tracking-wide">{p.title}</h3>
-                {p.summary ? <p className="text-[11px] leading-relaxed">{p.summary}</p> : null}
+                {p.summary ? <p className="text-[13px] leading-relaxed">{p.summary}</p> : null}
               </div>
               {p.tags?.length ? (
                 <div className="flex flex-wrap gap-2">
@@ -188,7 +188,7 @@ function Contact({ email, note, discord, phone }: {
   return (
     <div className="contact-section">
       <div className="contact-text">
-        {note ? <p className="text-[12px] leading-relaxed max-w-lg">{note}</p> : null}
+        {note ? <p className="text-[14px] leading-relaxed max-w-lg">{note}</p> : null}
       </div>
       <div className="contact-card">
         <h3 className="contact-card-title">Message me here</h3>
@@ -246,7 +246,7 @@ export default async function Home() {
         if (s.type === "about") return (
           <section key={s.id ?? s.title}>
             <Heading id={s.id} title={s.title} />
-            {s.body ? <p className="max-w-2xl text-[12px] leading-relaxed">{s.body}</p> : null}
+            {s.body ? <p className="max-w-2xl text-[14px] leading-relaxed">{s.body}</p> : null}
           </section>
         );
         if (s.type === "skills") return (
