@@ -1,0 +1,181 @@
+{
+  "site": {
+    "title": "Gazi Refatul — Portfolio",
+    "description": "Full‑stack engineer building scalable applications with modern technologies.",
+    "theme": {
+      "mode": "system",
+      "primary": "#b277ff",
+      "background": {
+        "light": "#ffffff",
+        "dark": "#0d0f15"
+      },
+      "foreground": {
+        "light": "#171717",
+        "dark": "#e6e7eb"
+      }
+    }
+  },
+  "nav": {
+    "items": [
+      { "label": "Home", "href": "#home" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Contributions", "href": "#contributions" },
+      { "label": "About", "href": "#about" },
+      { "label": "Skills", "href": "#skills" },
+      { "label": "Education", "href": "#education" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "id": "home",
+    "name": "Gazi Refatul",
+    "role": "Full‑stack Engineer",
+    "summary": "I develop scalable applications including web, mobile, and desktop, with a focus on integrating AI technologies. Currently working at Ascend AI.",
+    "avatar": "/favicon.svg",
+    "location": "Dhaka, Bangladesh",
+    "actions": [
+      { "label": "View Experience", "href": "#experience", "variant": "primary" },
+      { "label": "Contact", "href": "#contact", "variant": "ghost" }
+    ],
+    "social": [
+      { "label": "GitHub", "href": "https://github.com/refatul" },
+      { "label": "LinkedIn", "href": "https://linkedin.com/in/refatul" },
+      { "label": "Email", "href": "mailto:gazirefatul@gmail.com" }
+    ]
+  },
+  "sections": [
+    {
+      "type": "experience",
+      "id": "experience", 
+      "title": "Experience",
+      "items": [
+        {
+          "company": "Auxo Solutions",
+          "role": "Application Engineer",
+          "period": "Apr 2025 - Present",
+          "location": "New York, United States, Remote",
+          "achievements": [
+            "Working on enterprise web applications with focus on application engineering and architecture.",
+            "Developing scalable solutions for complex business requirements."
+          ]
+        },
+        {
+          "company": "Ascend AI",
+          "role": "Full stack engineer",
+          "period": "Sept 2023 - Mar 2025",
+          "location": "London, England, United Kingdom, Remote",
+          "website": "https://ascendai.site/",
+          "achievements": [
+            "Developed a variety of applications including web, mobile, and desktop, with a focus on integrating AI technologies.",
+            "Collaborated with a team of developers to design and develop a startup-level SaaS product, CleverOff.",
+            "Developed automated lead generation tool for Instagram with total 500 thousand successful DM sent and over 4000 active users.",
+            "Developed a web application that provides transparent shipping across multiple European carriers, increasing customer convenience and cost-efficiency.",
+            "Reduced speech suggestion delay in WhisperApp from 95s to 47s by optimizing database connectivity and speech processing."
+          ]
+        },
+        {
+          "company": "Reinforz AI",
+          "role": "Cofounder and COO",
+          "period": "June 2022 - Sept 2023",
+          "location": "Delaware, US",
+          "website": "https://reinforz.ai/",
+          "achievements": [
+            "Developed and improved user interface elements, focusing on enhancing user engagement and overall experience, applying advanced principles of UI/UX design.",
+            "Seamlessly integrated backend and frontend systems utilizing RESTful APIs, adhering to the industry-standard MVC architecture to promote efficient data handling and long-term system maintainability.",
+            "Co-authored the webapp with other developers and helped and guided interns on their tasks.",
+            "Optimized the landing page for SEO, improving search visibility and user engagement.",
+            "Managed site hosting with Docker and leveraged AWS services like Elastic Beanstalk, S3, and EC2 for deployment, storage, and computing."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "projects",
+      "id": "contributions",
+      "title": "Open Source Contributions",
+      "description": "Contributed to projects such as nice-node, goodcollective, safes, unlock protocol, etc.",
+      "items": [
+        {
+          "title": "Nice Node",
+          "summary": "Implemented new features and resolved issues across decentralized applications, improving performance and user experience.",
+          "tags": ["Node.js", "TypeScript", "Blockchain"],
+          "links": [{ "label": "GitHub", "href": "https://github.com/nice-node" }]
+        },
+        {
+          "title": "GoodCollective",
+          "summary": "Worked with global dev teams to advance open-source blockchain ecosystems, including protocol-level enhancements.",
+          "tags": ["Blockchain", "Smart Contracts", "Web3"],
+          "links": [{ "label": "GitHub", "href": "https://github.com/goodcollective" }]
+        },
+        {
+          "title": "Safes Protocol",
+          "summary": "Contributed to secure multi-signature wallet solutions and decentralized finance protocols.",
+          "tags": ["DeFi", "Security", "Smart Contracts"],
+          "links": [{ "label": "GitHub", "href": "https://github.com/safes" }]
+        },
+        {
+          "title": "Unlock Protocol",
+          "summary": "Enhanced membership and access control systems for decentralized applications.",
+          "tags": ["Protocol", "Access Control", "NFT"],
+          "links": [{ "label": "GitHub", "href": "https://github.com/unlock-protocol" }]
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "id": "about",
+      "title": "About",
+      "body": "I'm a full-stack engineer with experience in building scalable applications across web, mobile, and desktop platforms. I specialize in integrating AI technologies and have a strong background in both startup environments and open-source contributions. I hold a BSc in Computer Science and Engineering from BRAC University with a 3.76 CGPA, where I co-authored an undergraduate thesis on deep learning and image processing."
+    },
+    {
+      "type": "skills",
+      "id": "skills",
+      "title": "Skills",
+      "groups": [
+        { 
+          "title": "Programming Languages", 
+          "items": ["TypeScript", "Python", "Java"] 
+        },
+        { 
+          "title": "Libraries and Frameworks", 
+          "items": ["Next.js", "React Native", "Electron", "TailwindCSS", "Puppeteer", "AstroJS"] 
+        },
+        { 
+          "title": "DevOps", 
+          "items": ["GNU+Linux", "Git", "Docker", "AWS"] 
+        },
+        { 
+          "title": "DBMS", 
+          "items": ["PostgreSQL", "SQLite", "Prisma/Drizzle ORM", "Firestore"] 
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "id": "education",
+      "title": "Education",
+      "items": [
+        {
+          "institution": "BRAC University",
+          "degree": "BSc in Computer Science and Engineering", 
+          "period": "Jan 2020 - May 2024",
+          "gpa": "3.76 CGPA",
+          "achievements": [
+            "Co-authored an undergraduate thesis focused on deep learning and image processing and wrote paper on LLM as coursework.",
+            "Undergraduate teaching assistant for a Data Structure and Algorithm course",
+            "Earned the Higher Distinction Award and listed in the Vice Chancellor's Merit List for academic excellence."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "id": "contact", 
+      "title": "Contact",
+      "email": "gazirefatul@gmail.com",
+      "phone": "+8801617009196",
+      "discord": "arionrefat",
+      "note": "I'm interested in freelance opportunities and full-time roles. However, if you have other request or question, don't hesitate to contact me"
+    }
+  ]
+}

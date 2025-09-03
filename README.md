@@ -1,83 +1,60 @@
-# PortSite
+This is a Next.js portfolio starter wired to a global JSON config so you can change content and theme without touching code.
 
-## Features
+## Getting Started
 
-✔️ Integration with **Tailwind CSS** ([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/)) supporting **Dark mode**.
+Run the dev server:
 
-✔️ Uses the following integrations:
-
-- @astrojs/mdx
-- @astrojs/image
-- @astrojs/tailwind - with prettier class sorting plugin
-- @astro-icon
-- @astro-seo
-- @astro-navbar
-
-🔜 Blog with frontmatter (title, description, author, date, image, tags) and RSS feed, sitemap and robots.txt
-
-🔜 404 error page
-
-## Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.ico
-|   ├── hero.png
-|   └── ...
-├── src/
-|   ├── assets/
-|   |   ├── images/
-│   │   |   ├── hero.png
-|   |   |   └── ...
-│   ├── components/
-│   │   ├── ui/
-│   │   |   ├── BackToTop.astro
-|   |   |   └── ...
-│   │   ├── About.astro
-│   │   ├── Contact.astro
-|   |   └── ...
-│   ├── content/
-│   │   ├── projects/
-│   │   │   ├── project-1.md
-│   │   │   ├── project-1.md
-│   │   │   └── ...
-│   │   └-- config.ts
-│   ├── layouts/
-│   │   ├── Layout.astro
-│   ├── pages/
-│   │   ├── index.astro
-│   ├── tests/
-│   │   ├── index.spec.ts
-├── package.json
-├── astro.config.mjs
-└── ...
+```bash
+npm run dev
 ```
 
-Astro looks for `.astro`, `.md` or `.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Open http://localhost:3000
 
-`src/components/` is where we put any Astro components and similarly `src/layouts/` for layouts.
+## Config-driven content
 
-Images can be placed in `src/images/`.
+All site content and theme live in `public/portfolio.config.json`.
 
-Blog and documentation content are created as collections of Markdown or MDX files in `src/content`.
+- `site.title`, `site.description` control metadata and header title
+- `site.theme`: primary color and light/dark background/foreground
+- `nav.items`: header navigation
+- `hero`: name, role, summary, actions, social links
+- `sections`: supports `projects`, `about`, `skills`, `contact`
 
-Any static assets, eg. images, can be placed in the `public/` directory.
+Edit the JSON and refresh — the page renders dynamically from the config.
 
-## Commands
+Example snippet:
 
-All commands are run from the root of the project, from a terminal:
+```json
+{
+  "site": { "title": "John Doe — Portfolio", "description": "Full‑stack developer." },
+  "nav": { "items": [{ "label": "Projects", "href": "#projects" }] },
+  "hero": { "name": "John Doe", "role": "Full‑stack Developer" },
+  "sections": [
+    { "type": "projects", "title": "Projects", "items": [{ "title": "Acme" }] },
+    { "type": "about", "title": "About", "body": "Bio here" },
+    { "type": "skills", "title": "Skills", "groups": [{ "title": "Core", "items": ["TS", "React"] }] },
+    { "type": "contact", "title": "Contact", "email": "hello@example.com" }
+  ]
+}
+```
 
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `yarn`              | Installs dependencies                              |
-| `yarn dev`          | Starts local dev server at `localhost:3000`        |
-| `yarn build`        | Build your production site to `./dist/`            |
-| `yarn preview`      | Preview your build locally, before deploying       |
-| `yarn astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `yarn astro --help` | Get help using the Astro CLI                       |
-| `yarn test:e2e`     | Run Playwright tests                               |
+## Theming
 
-💫 Used free template from **[Astro 2.0](https://astro.build/blog/astro-2/)**.
+The theme is controlled by CSS variables injected from the JSON at runtime:
+- `--primary` maps to Tailwind tokens `text-primary` and `bg-primary`
+- `--background` maps to `bg-background`
+- `--foreground` maps to `text-foreground`
+
+You can tweak `site.theme` in the config to change colors globally.
+
+## Files of interest
+
+- `public/portfolio.config.json` — single source of truth
+- `src/lib/config.ts` — TypeScript types + loader + CSS var generator
+- `src/app/layout.tsx` — applies theme + nav + metadata from config
+- `src/app/page.tsx` — renders hero and dynamic sections
+
+## Notes
+
+- This starter targets Next.js App Router with React Server Components by default
+- No data fetching outside the filesystem; deploy anywhere 
