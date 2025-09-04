@@ -4,6 +4,7 @@ import "./globals.css";
 import { loadConfig, themeStyleFromConfig } from "@/lib/config";
 import Link from "next/link";
 import { SocialIcon } from "@/components/SocialIcons";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 export const runtime = "nodejs";
 
@@ -42,7 +43,8 @@ export default async function RootLayout({
       <head>
         <style id="config-theme" dangerouslySetInnerHTML={{ __html: themeCss }} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>        
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ParticlesBackground />        
         {/* App shell with sidebar + top nav inline */}
         <div className="flex">
           <aside className="sidebar hidden md:flex">

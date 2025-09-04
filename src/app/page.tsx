@@ -9,6 +9,7 @@ import goodDollarImg from "../assets/gooddollar.jpeg";
 import unlockImg from "../assets/unlock.jpg";
 import safeImg from "../assets/safe.png";
 import { SocialIcon } from "@/components/SocialIcons";
+import { AnimatedText, FadeInText, TypewriterText } from "@/components/AnimatedText";
 
 function Heading({ id, title }: { id?: string; title?: string }) {
   if (!title) return null;
@@ -30,29 +31,49 @@ function Hero({ cfg }: { cfg: PortfolioConfig }) {
         <div className="flex-1 space-y-6">
           <div className="space-y-3">
             <h1 className="text-[30px] md:text-[32px] leading-[1.25] max-w-xl">
-              <span className="muted">{hero.name?.split(" ")[0]} is a </span>
-              <span className="text-[var(--accent)]">full-stack engineer</span> and <br />
-              <span className="text-[var(--accent)]">AI developer</span>
+              <FadeInText delay={0.2}>
+                <span className="muted">{hero.name?.split(" ")[0]} is a </span>
+              </FadeInText>
+              <AnimatedText 
+                words={["full-stack engineer", "AI developer", "problem solver", "tech innovator"]}
+                className="text-[var(--accent)]"
+                typingSpeed={100}
+                deletingSpeed={50}
+                delayBetweenWords={2500}
+              />
+              <FadeInText delay={1.5}>
+                <br />
+                <span className="muted">building the future</span>
+              </FadeInText>
             </h1>
-            {hero.summary ? <p className="max-w-xl text-[14px] leading-relaxed">{hero.summary}</p> : null}
+            {hero.summary ? (
+              <FadeInText delay={2} className="max-w-xl">
+                <TypewriterText 
+                  text={hero.summary} 
+                  speed={30} 
+                  delay={2.2}
+                  className="text-[14px] leading-relaxed"
+                />
+              </FadeInText>
+            ) : null}
           </div>
-          <div className="flex gap-3 flex-wrap">
+          <FadeInText delay={3} className="flex gap-3 flex-wrap">
             {(hero.actions ?? []).map(a => {
               const cls = a.variant === "primary" ? "btn primary" : a.variant === "ghost" ? "btn" : "text-[var(--accent)]";
               return <a key={a.href} href={a.href} className={cls}>{a.label}</a>;
             })}
-          </div>
-          <div className="pt-4">
+          </FadeInText>
+          <FadeInText delay={3.5} className="pt-4">
             <div className="status-pill">
               <span className="dot" /> Currently working at <strong className="text-[12px] tracking-wide">Auxo Solutions</strong>
             </div>
-          </div>
+          </FadeInText>
           {(hero.social ?? []).length ? (
-            <div className="flex gap-4 text-[13px]">
+            <FadeInText delay={4} className="flex gap-4 text-[13px]">
               {hero.social?.map(s => (
                 <SocialIcon key={s.href} platform={s.label} href={s.href} className="hover:text-[var(--accent)]" />
               ))}
-            </div>
+            </FadeInText>
           ) : null}
         </div>
       </div>
