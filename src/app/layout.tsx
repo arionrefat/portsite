@@ -79,7 +79,7 @@ export default async function RootLayout({
                 <div className="footer-left">
                   <div className="footer-brand">
                     <div className="footer-name">{cfg.hero?.name?.split(" ")[0] || "Gazi"}</div>
-                    <div className="footer-email">{cfg.site.email || "contact@example.com"}</div>
+                    <div className="footer-email">{cfg.site.email || "gazirefatul@gmail.com"}</div>
                   </div>
                   <div className="footer-tagline">{cfg.site.tagline || "Full-stack engineer and developer"}</div>
                 </div>
