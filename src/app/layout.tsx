@@ -5,6 +5,8 @@ import { loadConfig, themeStyleFromConfig } from "@/lib/config";
 import Link from "next/link";
 import { SocialIcon } from "@/components/SocialIcons";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import SmoothScrollLink from "@/components/SmoothScrollLink";
+import MobileNavigation from "@/components/MobileNavigation";
 
 export const runtime = "nodejs";
 
@@ -58,13 +60,17 @@ export default async function RootLayout({
           <div className="flex-1 min-h-screen">
             <header className="top-nav">
               <div className="inner-nav">
-                <Link href="#home" className="site-name">{cfg.hero?.name || cfg.site.title}</Link>
+                <SmoothScrollLink href="#home" className="site-name">{cfg.hero?.name || cfg.site.title}</SmoothScrollLink>
                 <nav className="nav-inline">
                   {navItems.map((item,i) => (
-                    <a key={item.href} href={item.href} className={i===0?"active":""}>{item.label.toLowerCase()}</a>
+                    <SmoothScrollLink key={item.href} href={item.href} className={i===0?"active":""}>{item.label.toLowerCase()}</SmoothScrollLink>
                   ))}
-                  <div className="lang-select">EN ▾</div>
                 </nav>
+                <MobileNavigation 
+                  navItems={navItems}
+                  socialLinks={cfg.hero?.social ?? []}
+                  siteName={cfg.hero?.name || cfg.site.title}
+                />
               </div>
             </header>
             <main className="wrap pt-24 pb-24 space-y-28 ml-sidebar">{children}</main>
@@ -73,9 +79,9 @@ export default async function RootLayout({
                 <div className="footer-left">
                   <div className="footer-brand">
                     <div className="footer-name">{cfg.hero?.name?.split(" ")[0] || "Gazi"}</div>
-                    <div className="footer-email">gazirefatul@gmail.com</div>
+                    <div className="footer-email">{cfg.site.email || "contact@example.com"}</div>
                   </div>
-                  <div className="footer-tagline">Full-stack engineer and AI developer</div>
+                  <div className="footer-tagline">{cfg.site.tagline || "Full-stack engineer and developer"}</div>
                 </div>
                 <div className="footer-right">
                   <div className="footer-media-title">Media</div>

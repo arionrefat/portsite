@@ -1,4 +1,4 @@
-import { loadConfig, type PortfolioConfig, type Project, type Experience, type Education } from "@/lib/config";
+import { loadConfig, type PortfolioConfig, type Project, type Experience } from "@/lib/config";
 import Image from "next/image";
 import rectBig from "../assets/Rectangle-big.png";
 import rectSmall from "../assets/Rectangle-small.png";
@@ -10,10 +10,11 @@ import unlockImg from "../assets/unlock.jpg";
 import safeImg from "../assets/safe.png";
 import { SocialIcon } from "@/components/SocialIcons";
 import { AnimatedText, FadeInText, TypewriterText } from "@/components/AnimatedText";
+import SmoothScrollLink from "@/components/SmoothScrollLink";
 
-function Heading({ id, title }: { id?: string; title?: string }) {
+function Heading({ title }: { title?: string }) {
   if (!title) return null;
-  return <h2 id={id} className="section-heading mb-6">{title.toLowerCase()}</h2>;
+  return <h2 className="section-heading mb-6">{title.toLowerCase()}</h2>;
 }
 
 function Hero({ cfg }: { cfg: PortfolioConfig }) {
@@ -60,12 +61,16 @@ function Hero({ cfg }: { cfg: PortfolioConfig }) {
           <FadeInText delay={3} className="flex gap-3 flex-wrap">
             {(hero.actions ?? []).map(a => {
               const cls = a.variant === "primary" ? "btn primary" : a.variant === "ghost" ? "btn" : "text-[var(--accent)]";
-              return <a key={a.href} href={a.href} className={cls}>{a.label}</a>;
+              return (
+                <SmoothScrollLink key={a.href} href={a.href} className={cls}>
+                  {a.label}
+                </SmoothScrollLink>
+              );
             })}
           </FadeInText>
           <FadeInText delay={3.5} className="pt-4">
             <div className="status-pill">
-              <span className="dot" /> Currently working at <strong className="text-[12px] tracking-wide">Auxo Solutions</strong>
+              <span className="dot" /> Currently working at <strong className="text-[12px] tracking-wide">{hero.currentEmployer || 'Remote'}</strong>
             </div>
           </FadeInText>
           {(hero.social ?? []).length ? (
@@ -174,31 +179,6 @@ function Skills({ groups = [] as { title?: string; items?: string[] }[] }) {
   );
 }
 
-function EducationCards({ items = [] as Education[] }) {
-  if (!items.length) return null;
-  return (
-    <div className="education-timeline">
-      {items.map((edu, index) => (
-        <div key={index} className="education-item">
-          <div className="education-header">
-            <div className="education-institution">{edu.institution}</div>
-            <div className="education-period">{edu.period}</div>
-          </div>
-          <div className="education-degree">{edu.degree}</div>
-          {edu.gpa && <div className="education-gpa">{edu.gpa}</div>}
-          {edu.achievements && edu.achievements.length > 0 && (
-            <ul className="education-achievements">
-              {edu.achievements.map((achievement, i) => (
-                <li key={i}>{achievement}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function Contact({ email, note, discord, phone }: { 
   email?: string; 
   note?: string; 
@@ -253,38 +233,32 @@ export default async function Home() {
       <Hero cfg={cfg} />
       {sections.map((s) => {
         if (s.type === "experience") return (
-          <section key={s.id ?? s.title}>
-            <Heading id={s.id} title={s.title} />
+          <section key={s.id ?? s.title} id={s.id}>
+            <Heading title={s.title} />
             <ExperienceCards items={s.items ?? []} />
           </section>
         );
         if (s.type === "projects") return (
-          <section key={s.id ?? s.title}>
-            <Heading id={s.id} title={s.title} />
+          <section key={s.id ?? s.title} id={s.id}>
+            <Heading title={s.title} />
             <ProjectCards items={s.items ?? []} description={s.description} />
           </section>
         );
         if (s.type === "about") return (
-          <section key={s.id ?? s.title}>
-            <Heading id={s.id} title={s.title} />
+          <section key={s.id ?? s.title} id={s.id}>
+            <Heading title={s.title} />
             {s.body ? <p className="max-w-2xl text-[14px] leading-relaxed">{s.body}</p> : null}
           </section>
         );
         if (s.type === "skills") return (
-          <section key={s.id ?? s.title}>
-            <Heading id={s.id} title={s.title} />
+          <section key={s.id ?? s.title} id={s.id}>
+            <Heading title={s.title} />
             <Skills groups={s.groups ?? []} />
           </section>
         );
-        if (s.type === "education") return (
-          <section key={s.id ?? s.title}>
-            <Heading id={s.id} title={s.title} />
-            <EducationCards items={s.items ?? []} />
-          </section>
-        );
         if (s.type === "contact") return (
-          <section key={s.id ?? s.title}>
-            <Heading id={s.id} title={s.title} />
+          <section key={s.id ?? s.title} id={s.id}>
+            <Heading title={s.title} />
             <Contact email={s.email} note={s.note} discord={s.discord} phone={s.phone} />
           </section>
         );

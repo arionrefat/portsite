@@ -14,14 +14,6 @@ export type Experience = {
   achievements?: string[] 
 };
 
-export type Education = {
-  institution: string;
-  degree: string;
-  period: string;
-  gpa?: string;
-  achievements?: string[];
-};
-
 export type ThemeConfig = {
   mode?: "light" | "dark" | "system";
   primary?: string;
@@ -33,6 +25,8 @@ export type PortfolioConfig = {
   site: {
     title: string;
     description?: string;
+    email?: string;
+    tagline?: string;
     theme?: ThemeConfig;
   };
   nav?: { items?: NavItem[] };
@@ -41,6 +35,7 @@ export type PortfolioConfig = {
     name?: string;
     role?: string;
     summary?: string;
+    currentEmployer?: string;
     avatar?: string;
     location?: string;
     actions?: Array<LinkItem & { variant?: "primary" | "ghost" | "link" }>;
@@ -71,12 +66,6 @@ export type PortfolioConfig = {
         id?: string;
         title?: string;
         groups?: { title?: string; items?: string[] }[];
-      }
-    | {
-        type: "education";
-        id?: string;
-        title?: string;
-        items?: Education[];
       }
     | {
         type: "contact";
