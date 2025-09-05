@@ -21,10 +21,10 @@
     "items": [
       { "label": "Home", "href": "#home" },
       { "label": "Experience", "href": "#experience" },
+      { "label": "Skills", "href": "#skills" },
       { "label": "Projects", "href": "#projects" },
       { "label": "Contributions", "href": "#contributions" },
       { "label": "About", "href": "#about" },
-      { "label": "Skills", "href": "#skills" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
@@ -112,7 +112,7 @@
       "groups": [
         { 
           "title": "Programming Languages", 
-          "items": ["TypeScript", "Python", "Java"] 
+          "items": ["TypeScript", "Python", "Java", "Solidity", "Golang"] 
         },
         { 
           "title": "Libraries and Frameworks", 
@@ -120,7 +120,7 @@
         },
         { 
           "title": "DevOps", 
-          "items": ["GNU+Linux", "Git", "Docker", "AWS"] 
+          "items": ["GNU+Linux", "Git", "Docker", "AWS", "GitHub Actions", "DigitalOcean"] 
         },
         { 
           "title": "DBMS", 
@@ -134,17 +134,6 @@
       "title": "Projects",
       "description": "Featured projects and applications I've developed",
       "items": [
-        {
-          "title": "WhisperApp AI",
-          "summary": "Real-time AI-powered conversation assistant that provides discreet prompts and suggestions during live conversations. Features voice recognition, customizable personas, and privacy-first design.",
-          "description": "An innovative mobile app that helps users excel in social interactions by providing real-time, AI-generated conversation prompts. The app listens to conversations and offers contextual suggestions through discreet notifications, helping users feel more confident in social and professional situations.",
-          "tags": ["AI", "Speech Processing", "Mobile App", "Real-time", "Social Assistant"],
-          "links": [
-            { "label": "Website", "href": "https://www.whisperapp.ai/" },
-            { "label": "App Store", "href": "https://apps.apple.com/gb/app/whisper-live-convo-assist/id6720728513" }
-          ],
-          "featured": true
-        },
         {
           "title": "CleverCore AI",
           "summary": "Custom AI partner specializing in tailored LLM & VLM solutions for business automation, insight, and innovation. Delivers enterprise-grade AI implementations across multiple industries.",
@@ -161,8 +150,29 @@
           "description": "A comprehensive fintech platform for UAE businesses offering automated VAT returns, corporate tax declarations, professional invoice generation, banking integration, and secure document management. Built with React Native and Next.js for seamless cross-platform experience.",
           "tags": ["Fintech", "Mobile App", "Web Platform", "Tax Compliance", "UAE Business", "SME", "React Native", "Next.js"],
           "links": [
-            { "label": "Website", "href": "https://soli.io" },
+            { "label": "Website", "href": "https://soly-snowy.vercel.app/login" },
             { "label": "App Store", "href": "https://apps.apple.com/gb/app/soli-finance/id1234567890" }
+          ],
+          "featured": true
+        },
+        {
+          "title": "DevCrafter",
+          "summary": "A powerful tool for tracking GitHub activity across repositories, offering real-time insights into commits, issues, pull requests, and team contributions.",
+          "description": "A comprehensive tool for monitoring and analyzing GitHub repositories, providing valuable insights into code changes, collaboration patterns, and project health.",
+          "tags": ["GitHub", "Analytics", "Productivity"],
+          "links": [
+            { "label": "Website", "href": "https://devcrafter.com" }
+          ],
+          "featured": true
+        },
+        {
+          "title": "WhisperApp AI",
+          "summary": "Real-time AI-powered conversation assistant that provides discreet prompts and suggestions during live conversations. Features voice recognition, customizable personas, and privacy-first design.",
+          "description": "An innovative mobile app that helps users excel in social interactions by providing real-time, AI-generated conversation prompts. The app listens to conversations and offers contextual suggestions through discreet notifications, helping users feel more confident in social and professional situations.",
+          "tags": ["AI", "Speech Processing", "Mobile App", "Real-time", "Social Assistant"],
+          "links": [
+            { "label": "Website", "href": "https://www.whisperapp.ai/" },
+            { "label": "App Store", "href": "https://apps.apple.com/gb/app/whisper-live-convo-assist/id6720728513" }
           ],
           "featured": true
         }
@@ -213,7 +223,7 @@
       "email": "gazirefatul@gmail.com",
       "phone": "+8801617009196",
       "discord": "arionrefat",
-      "note": "I'm interested in freelance opportunities and full-time roles. However, if you have other request or question, don't hesitate to contact me"
+      "note": "I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me"
     }
   ]
 }

@@ -9,7 +9,9 @@ import goodDollarImg from "../assets/gooddollar.jpeg";
 import unlockImg from "../assets/unlock.jpg";
 import safeImg from "../assets/safe.png";
 import soliLogo from "../assets/soli.svg";
+import devCrafterLogo from "../assets/devcrafter.png";
 import cleverCoreAILogo from "../assets/clevercoreai.png";
+import whisperAppLogo from "../assets/upscaled_whipherai.png";
 import { SocialIcon } from "@/components/SocialIcons";
 import { AnimatedText, FadeInText, TypewriterText } from "@/components/AnimatedText";
 import SmoothScrollLink from "@/components/SmoothScrollLink";
@@ -44,10 +46,6 @@ function Hero({ cfg }: { cfg: PortfolioConfig }) {
                 deletingSpeed={50}
                 delayBetweenWords={2500}
               />
-              <FadeInText delay={1.5}>
-                <br />
-                <span className="muted">building the future</span>
-              </FadeInText>
             </h1>
             {hero.summary ? (
               <FadeInText delay={2} className="max-w-xl">
@@ -127,8 +125,10 @@ function ProjectCards({ items = [] as Project[], description }: { items?: Projec
   const getProjectImage = (project: Project) => {
     // Check for specific project titles
     const titleLower = project.title.toLowerCase();
+    if (titleLower.includes('whisperapp') || titleLower.includes('whisper app')) return whisperAppLogo;
     if (titleLower.includes('soli')) return soliLogo;
     if (titleLower.includes('clevercore')) return cleverCoreAILogo;
+    if (titleLower.includes('devcrafter')) return devCrafterLogo;
     if (titleLower.includes('nice node')) return niceNodeImg;
     if (titleLower.includes('goodcollective') || titleLower.includes('good collective')) return goodDollarImg;
     if (titleLower.includes('unlock')) return unlockImg;

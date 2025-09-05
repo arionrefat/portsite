@@ -837,8 +837,11 @@ p {
 /* Footer */
 .footer-section {
   border-top: 1px solid var(--border);
-  padding: 2rem 1.5rem 1.5rem;
+  padding: 2rem 1rem 1.5rem;
   margin-top: 4rem;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-content {
@@ -853,6 +856,16 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  
+  .footer-section {
+    padding: 2rem 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .footer-section {
+    padding: 2rem 56px 1.5rem;
   }
 }
 

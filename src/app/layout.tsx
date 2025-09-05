@@ -98,11 +98,6 @@ export default async function RootLayout({
             </footer>
           </div>
         </div>
-        {/* End app shell */}
-        {/* Legacy footer removed; replaced above */}
-        <footer className="hidden" />
-        <footer className="hidden" />
-        <footer className="hidden" />
       </body>
     </html>
   );
