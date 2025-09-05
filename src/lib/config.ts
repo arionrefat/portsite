@@ -3,7 +3,7 @@ import path from "path";
 
 export type NavItem = { label: string; href: string };
 export type LinkItem = { label: string; href: string };
-export type Project = { title: string; summary?: string; tags?: string[]; links?: LinkItem[] };
+export type Project = { title: string; summary?: string; description?: string; image?: string; tags?: string[]; links?: LinkItem[]; featured?: boolean };
 
 export type Experience = { 
   company: string; 

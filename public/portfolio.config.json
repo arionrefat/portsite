@@ -106,6 +106,29 @@
       ]
     },
     {
+      "type": "skills",
+      "id": "skills",
+      "title": "Skills",
+      "groups": [
+        { 
+          "title": "Programming Languages", 
+          "items": ["TypeScript", "Python", "Java"] 
+        },
+        { 
+          "title": "Libraries and Frameworks", 
+          "items": ["Next.js", "React Native", "Electron", "TailwindCSS", "Puppeteer", "AstroJS"] 
+        },
+        { 
+          "title": "DevOps", 
+          "items": ["GNU+Linux", "Git", "Docker", "AWS"] 
+        },
+        { 
+          "title": "DBMS", 
+          "items": ["PostgreSQL", "SQLite", "Prisma/Drizzle ORM", "Firestore"] 
+        }
+      ]
+    },
+    {
       "type": "projects",
       "id": "projects",
       "title": "Projects",
@@ -129,6 +152,17 @@
           "tags": ["AI", "LLM", "VLM", "Enterprise", "Automation", "Business Intelligence"],
           "links": [
             { "label": "Website", "href": "https://www.clevercore.ai/" }
+          ],
+          "featured": true
+        },
+        {
+          "title": "Soli",
+          "summary": "Cross-platform SME finance platform for UAE businesses - streamlines VAT/corporate tax filings, invoice generation, transaction categorization, and regulatory compliance with guided onboarding and document management.",
+          "description": "A comprehensive fintech platform for UAE businesses offering automated VAT returns, corporate tax declarations, professional invoice generation, banking integration, and secure document management. Built with React Native and Next.js for seamless cross-platform experience.",
+          "tags": ["Fintech", "Mobile App", "Web Platform", "Tax Compliance", "UAE Business", "SME", "React Native", "Next.js"],
+          "links": [
+            { "label": "Website", "href": "https://soli.io" },
+            { "label": "App Store", "href": "https://apps.apple.com/gb/app/soli-finance/id1234567890" }
           ],
           "featured": true
         }
@@ -171,29 +205,6 @@
       "id": "about",
       "title": "About",
       "body": "I'm a full-stack engineer with experience in building scalable applications across web, mobile, and desktop platforms. I specialize in integrating AI technologies and have a strong background in both startup environments and open-source contributions. I hold a BSc in Computer Science and Engineering from BRAC University with a 3.76 CGPA, where I co-authored an undergraduate thesis on deep learning and image processing."
-    },
-    {
-      "type": "skills",
-      "id": "skills",
-      "title": "Skills",
-      "groups": [
-        { 
-          "title": "Programming Languages", 
-          "items": ["TypeScript", "Python", "Java"] 
-        },
-        { 
-          "title": "Libraries and Frameworks", 
-          "items": ["Next.js", "React Native", "Electron", "TailwindCSS", "Puppeteer", "AstroJS"] 
-        },
-        { 
-          "title": "DevOps", 
-          "items": ["GNU+Linux", "Git", "Docker", "AWS"] 
-        },
-        { 
-          "title": "DBMS", 
-          "items": ["PostgreSQL", "SQLite", "Prisma/Drizzle ORM", "Firestore"] 
-        }
-      ]
     },
     {
       "type": "contact",

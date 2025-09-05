@@ -37,7 +37,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 17px; /* increased from 15px */
+  font-size: 19px; /* increased from 17px for better zoom */
   line-height: 1.55;
   letter-spacing: 0.3px;
 }
@@ -224,8 +224,8 @@ h1,h2,h3,h4 {
 }
 
 h1 {
-  font-size: clamp(1.75rem, 4vw, 2rem);
-  line-height: 1.25;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
 }
 
 h2 {

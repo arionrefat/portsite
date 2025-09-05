@@ -8,6 +8,8 @@ import niceNodeImg from "../assets/nice-node.jpg";
 import goodDollarImg from "../assets/gooddollar.jpeg";
 import unlockImg from "../assets/unlock.jpg";
 import safeImg from "../assets/safe.png";
+import soliLogo from "../assets/soli.svg";
+import cleverCoreAILogo from "../assets/clevercoreai.png";
 import { SocialIcon } from "@/components/SocialIcons";
 import { AnimatedText, FadeInText, TypewriterText } from "@/components/AnimatedText";
 import SmoothScrollLink from "@/components/SmoothScrollLink";
@@ -31,7 +33,7 @@ function Hero({ cfg }: { cfg: PortfolioConfig }) {
   <div className="flex flex-col md:flex-row gap-12">
         <div className="flex-1 space-y-6">
           <div className="space-y-3">
-            <h1 className="text-[30px] md:text-[32px] leading-[1.25] max-w-xl">
+            <h1 className="text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] max-w-4xl">
               <FadeInText delay={0.2}>
                 <span className="muted">{hero.name?.split(" ")[0]} is a </span>
               </FadeInText>
@@ -122,8 +124,11 @@ function ExperienceCards({ items = [] as Experience[] }) {
 function ProjectCards({ items = [] as Project[], description }: { items?: Project[]; description?: string }) {
   if (!items.length) return null;
   
-  const getProjectImage = (title: string) => {
-    const titleLower = title.toLowerCase();
+  const getProjectImage = (project: Project) => {
+    // Check for specific project titles
+    const titleLower = project.title.toLowerCase();
+    if (titleLower.includes('soli')) return soliLogo;
+    if (titleLower.includes('clevercore')) return cleverCoreAILogo;
     if (titleLower.includes('nice node')) return niceNodeImg;
     if (titleLower.includes('goodcollective') || titleLower.includes('good collective')) return goodDollarImg;
     if (titleLower.includes('unlock')) return unlockImg;
@@ -138,7 +143,13 @@ function ProjectCards({ items = [] as Project[], description }: { items?: Projec
         {items.map((p) => (
           <article key={p.title} className="project-card">
             <div className="project-thumb">
-              <Image src={getProjectImage(p.title)} alt={`${p.title} thumbnail`} />
+              <Image 
+                src={getProjectImage(p)} 
+                alt={`${p.title} thumbnail`} 
+                width={200} 
+                height={200} 
+                className="project-image"
+              />
             </div>
             <div className="project-meta">
               <div className="flex flex-col gap-2">
