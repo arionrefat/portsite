@@ -10,7 +10,7 @@ interface MobileNavigationProps {
   siteName: string;
 }
 
-export default function MobileNavigation({ navItems, socialLinks = [], siteName }: MobileNavigationProps) {
+export default function MobileNavigation({ navItems, socialLinks = [] }: MobileNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {

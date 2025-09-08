@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 interface SmoothScrollLinkProps {
   href: string;
   children: React.ReactNode;
