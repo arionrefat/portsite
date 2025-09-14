@@ -37,7 +37,11 @@
     "avatar": "/favicon.svg",
     "location": "Dhaka, Bangladesh",
     "actions": [
-      { "label": "View Experience", "href": "#experience", "variant": "primary" },
+      {
+        "label": "View Resume",
+        "href": "/portsitecv.pdf",
+        "variant": "primary"
+      },
       { "label": "Contact", "href": "#contact", "variant": "ghost" }
     ],
     "social": [
@@ -49,22 +53,9 @@
   "sections": [
     {
       "type": "experience",
-      "id": "experience", 
+      "id": "experience",
       "title": "Experience",
       "items": [
-        {
-          "company": "Quanteron",
-          "role": "Software Engineer",
-          "period": "Dec 2024 - Present",
-          "location": "Dubai, United Arab Emirates, Remote",
-          "achievements": [
-            "Led development of Finmatter, a real-time financial tracking & investment analysis web app.",
-            "Contributed to Devoter, a platform for collaborative open-source project management.",
-            "Designed & secured backend APIs with Node.js, Fastify, and Express.",
-            "Managed PostgreSQL databases with Prisma, from schema design to migrations."
-          ],
-          "skills": ["PostgreSQL", "Prisma ORM", "+2 skills"]
-        },
         {
           "company": "Auxo Solutions",
           "role": "Application Engineer",
@@ -110,21 +101,35 @@
       "id": "skills",
       "title": "Skills",
       "groups": [
-        { 
-          "title": "Programming Languages", 
-          "items": ["TypeScript", "Python", "Java", "Solidity", "Golang"] 
+        {
+          "title": "Programming Languages",
+          "items": ["TypeScript", "Python", "Java", "Solidity", "Golang"]
         },
-        { 
-          "title": "Libraries and Frameworks", 
-          "items": ["Next.js", "React Native", "Electron", "TailwindCSS", "Puppeteer", "AstroJS"] 
+        {
+          "title": "Libraries and Frameworks",
+          "items": [
+            "Next.js",
+            "React Native",
+            "Electron",
+            "TailwindCSS",
+            "Puppeteer",
+            "AstroJS"
+          ]
         },
-        { 
-          "title": "DevOps", 
-          "items": ["GNU+Linux", "Git", "Docker", "AWS", "GitHub Actions", "DigitalOcean"] 
+        {
+          "title": "DevOps",
+          "items": [
+            "GNU+Linux",
+            "Git",
+            "Docker",
+            "AWS",
+            "GitHub Actions",
+            "DigitalOcean"
+          ]
         },
-        { 
-          "title": "DBMS", 
-          "items": ["PostgreSQL", "SQLite", "Prisma/Drizzle ORM", "Firestore"] 
+        {
+          "title": "DBMS",
+          "items": ["PostgreSQL", "SQLite", "Prisma/Drizzle ORM", "Firestore"]
         }
       ]
     },
@@ -138,7 +143,14 @@
           "title": "CleverCore AI",
           "summary": "Custom AI partner specializing in tailored LLM & VLM solutions for business automation, insight, and innovation. Delivers enterprise-grade AI implementations across multiple industries.",
           "description": "A comprehensive AI solutions platform that empowers businesses with custom Large Language Models (LLM) and Vision Language Models (VLM). The platform serves various industries including education, healthcare, legal, and finance, providing tailored AI implementations through a structured five-step consultation and development process.",
-          "tags": ["AI", "LLM", "VLM", "Enterprise", "Automation", "Business Intelligence"],
+          "tags": [
+            "AI",
+            "LLM",
+            "VLM",
+            "Enterprise",
+            "Automation",
+            "Business Intelligence"
+          ],
           "links": [
             { "label": "Website", "href": "https://www.clevercore.ai/" }
           ],
@@ -148,10 +160,25 @@
           "title": "Soli",
           "summary": "Cross-platform SME finance platform for UAE businesses - streamlines VAT/corporate tax filings, invoice generation, transaction categorization, and regulatory compliance with guided onboarding and document management.",
           "description": "A comprehensive fintech platform for UAE businesses offering automated VAT returns, corporate tax declarations, professional invoice generation, banking integration, and secure document management. Built with React Native and Next.js for seamless cross-platform experience.",
-          "tags": ["Fintech", "Mobile App", "Web Platform", "Tax Compliance", "UAE Business", "SME", "React Native", "Next.js"],
+          "tags": [
+            "Fintech",
+            "Mobile App",
+            "Web Platform",
+            "Tax Compliance",
+            "UAE Business",
+            "SME",
+            "React Native",
+            "Next.js"
+          ],
           "links": [
-            { "label": "Website", "href": "https://soly-snowy.vercel.app/login" },
-            { "label": "App Store", "href": "https://apps.apple.com/gb/app/soli-finance/id1234567890" }
+            {
+              "label": "Website",
+              "href": "https://soly-snowy.vercel.app/login"
+            },
+            {
+              "label": "App Store",
+              "href": "https://apps.apple.com/gb/app/soli-finance/id1234567890"
+            }
           ],
           "featured": true
         },
@@ -160,19 +187,26 @@
           "summary": "A powerful tool for tracking GitHub activity across repositories, offering real-time insights into commits, issues, pull requests, and team contributions.",
           "description": "A comprehensive tool for monitoring and analyzing GitHub repositories, providing valuable insights into code changes, collaboration patterns, and project health.",
           "tags": ["GitHub", "Analytics", "Productivity"],
-          "links": [
-            { "label": "Website", "href": "https://devcrafter.com" }
-          ],
+          "links": [{ "label": "Website", "href": "https://devcrafter.com" }],
           "featured": true
         },
         {
           "title": "WhisperApp AI",
           "summary": "Real-time AI-powered conversation assistant that provides discreet prompts and suggestions during live conversations. Features voice recognition, customizable personas, and privacy-first design.",
           "description": "An innovative mobile app that helps users excel in social interactions by providing real-time, AI-generated conversation prompts. The app listens to conversations and offers contextual suggestions through discreet notifications, helping users feel more confident in social and professional situations.",
-          "tags": ["AI", "Speech Processing", "Mobile App", "Real-time", "Social Assistant"],
+          "tags": [
+            "AI",
+            "Speech Processing",
+            "Mobile App",
+            "Real-time",
+            "Social Assistant"
+          ],
           "links": [
             { "label": "Website", "href": "https://www.whisperapp.ai/" },
-            { "label": "App Store", "href": "https://apps.apple.com/gb/app/whisper-live-convo-assist/id6720728513" }
+            {
+              "label": "App Store",
+              "href": "https://apps.apple.com/gb/app/whisper-live-convo-assist/id6720728513"
+            }
           ],
           "featured": true
         }
@@ -188,13 +222,17 @@
           "title": "Nice Node",
           "summary": "Implemented new features and resolved issues across decentralized applications, improving performance and user experience.",
           "tags": ["Node.js", "TypeScript", "Blockchain"],
-          "links": [{ "label": "GitHub", "href": "https://github.com/nice-node" }]
+          "links": [
+            { "label": "GitHub", "href": "https://github.com/nice-node" }
+          ]
         },
         {
           "title": "GoodCollective",
           "summary": "Worked with global dev teams to advance open-source blockchain ecosystems, including protocol-level enhancements.",
           "tags": ["Blockchain", "Smart Contracts", "Web3"],
-          "links": [{ "label": "GitHub", "href": "https://github.com/goodcollective" }]
+          "links": [
+            { "label": "GitHub", "href": "https://github.com/goodcollective" }
+          ]
         },
         {
           "title": "Safes Protocol",
@@ -206,7 +244,9 @@
           "title": "Unlock Protocol",
           "summary": "Enhanced membership and access control systems for decentralized applications.",
           "tags": ["Protocol", "Access Control", "NFT"],
-          "links": [{ "label": "GitHub", "href": "https://github.com/unlock-protocol" }]
+          "links": [
+            { "label": "GitHub", "href": "https://github.com/unlock-protocol" }
+          ]
         }
       ]
     },
@@ -218,7 +258,7 @@
     },
     {
       "type": "contact",
-      "id": "contact", 
+      "id": "contact",
       "title": "Contact",
       "email": "gazirefatul@gmail.com",
       "phone": "+8801617009196",
