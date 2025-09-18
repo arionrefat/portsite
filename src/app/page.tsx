@@ -12,6 +12,7 @@ import soliLogo from "../assets/soli.svg";
 import devCrafterLogo from "../assets/devcrafter.png";
 import cleverCoreAILogo from "../assets/clevercoreai.png";
 import whisperAppLogo from "../assets/upscaled_whipherai.png";
+import ascendDMLogo from "../assets/AscendDM.png";
 import { SocialIcon } from "@/components/SocialIcons";
 import { AnimatedText, FadeInText, TypewriterText } from "@/components/AnimatedText";
 import SmoothScrollLink from "@/components/SmoothScrollLink";
@@ -133,6 +134,7 @@ function ProjectCards({ items = [] as Project[], description }: { items?: Projec
     if (titleLower.includes('goodcollective') || titleLower.includes('good collective')) return goodDollarImg;
     if (titleLower.includes('unlock')) return unlockImg;
     if (titleLower.includes('safes') || titleLower.includes('safe')) return safeImg;
+    if (titleLower.includes('ascend dm') || titleLower.includes('ascenddm')) return ascendDMLogo;
     return heroLogo; // fallback
   };
   

@@ -213,7 +213,7 @@
         ,
         {
           "title": "Ascend DM",
-          "summary": "Instagram DM automation platform that turns every message into an opportunity with personalized outreach, multi‑browser scalability, spintax variation, and built‑in lead generation.",
+          "summary": "Instagram + desktop (Electron) DM automation platform that turns every message into an opportunity with personalized outreach, multi‑browser scalability, spintax variation, and built‑in lead generation.",
           "description": "Ascend DM helps creators, founders, and growth teams automate Instagram outreach at scale while keeping messages human and relevant. It supports up to 8 concurrent browser sessions with anti‑detect proxy isolation, dynamic spintax scripting to reduce repetition and suspension risk, advanced audience filtering & segmentation, scheduled and follow‑up sequences so no lead is lost, smart mass + warmup DM flows, comment + engagement automations, multi‑login session management, and integrated lead generation & tracking. Combined with the complementary Unibox experience, it centralizes replies and preserves workflow sanity—saving time, increasing conversion, and compounding network growth.",
           "tags": [
             "Automation",
