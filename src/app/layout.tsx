@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { loadConfig, themeStyleFromConfig } from "@/lib/config";
-import Link from "next/link";
 import { SocialIcon } from "@/components/SocialIcons";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import SmoothScrollLink from "@/components/SmoothScrollLink";
